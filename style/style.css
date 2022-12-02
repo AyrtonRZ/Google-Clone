@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul li {
+    padding: 5px;
+    list-style: none;
+    color: rgba(0, 0, 0, 0.685);
+}
+
+header ul li a {
+    padding: 5px 0;
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+header ul li #menu {
+    box-sizing: content-box;
+    margin: 6px 0 0 10px;
+    width: 15px;
+    border: 10px solid transparent;
+    border-radius: 25px;
+}
+
+header ul li #menu:hover {
+    border: 10px solid rgba(173, 173, 173, 0.239);
+    background-color: rgba(173, 173, 173, 0.239);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+header ul li p {
+    color: #fff;
+    background-color: #3c73e8;
+    padding: 9px 22px;
+    margin: 2px 12px 0 0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+
+header ul li p:hover {
+    background-color: hsl(217, 79%, 57%);
+    cursor: pointer;
+}
+
+main {    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main .logo img {
+    margin: -15px 0 5px 0;
+    width: 270px;
+}
+
+main .search {
+    margin: -10px;
+    width: 580px;
+    height: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.096);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+main .search:hover {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.233);
+}
+
+main .search label i {
+    color: rgb(139, 139, 139);
+    padding: 15px;
+}
+
+main .search input { 
+    width: 100%;
+    border: transparent;
+}
+
+main .search input:focus { 
+    outline: none;
+}
+
+main .search > abbr i {
+    cursor: pointer;
+    color: rgb(139, 139, 139);
+    margin: 10px;
+}
+
+main .search #mic {
+    padding-right: 20px;
+}
+
+main .uteis {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px 0 50px;
+}
+
+main .uteis a {
+    padding: 8px;
+    margin: 0 8px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.685);
+    background-color: rgba(246, 245, 245, 0.692);
+}
+
+main .uteis a:hover {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.541);
+}
+
+main > p {
+    margin-top: 35px;
+    font-size: 0.9rem;
+    color: #3c4043;
+}
+
+main > p a {
+    text-decoration: none;
+    color: #1a0dab;
+}
+
+main > p a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+footer .brasil {
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 0.85rem;
+    color: #70757a;
+    background-color: rgba(169, 169, 169, 0.15);
+    border-bottom: 2px solid rgba(190, 190, 190, 0.342);
+}
+
+footer .nav-container {    
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(169, 169, 169, 0.15);
+}
+
+footer .nav-container .nav-1 ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+footer .nav-container .nav-2 ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 0.85rem;
+    color: #70757a;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+
+    footer .nav-container {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    footer .nav-container {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 90px;
+    }
+
+    main .search {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    main .uteis {
+        display: none;
+    }
+
+    footer .brasil {
+        height: 20px;
+        font-size: 0.5rem;
+    }
+
+    footer .nav-container {
+        height: 40px;
+    }
+
+    footer .nav-container .nav-1 ul li a,
+    footer .nav-container .nav-2 ul li a {
+        font-size: 0.5rem;
+    }
+}
